@@ -3,6 +3,11 @@
 <head>
 <title>KOW</title>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="preload" as="image" href="elProtectorFondo.webp">
+<link rel="preload" as="image" href="sombraMarinaFondo.webp">
+<link rel="preload" as="image" href="airWhisperFondo.webp">
+<link rel="preload" as="image" href="estruendoNocturnoFondo.webp">
 <style>
 
 * {
@@ -76,13 +81,9 @@ padding: 20px;
 }
 
 nav details ul li a {
+color: #000;
+text-decoration: none;
 font-size: 24px;
-}
-
-a {
-font-size:20px;
-text-decoration:none;
-color:#000;
 }
 
 .main {
@@ -92,26 +93,32 @@ text-align:center;
 .main h1 {
 margin:10px;
 padding:10px;
-font-size: 40px;
+font-size: 54px;
 }
 
 section h2 {
-margin:20px auto 20px auto;
+margin-top:40px;
 padding:10px;
-font-size: 32px;
-width: 50%;
+font-size: 40px;
 text-align: center;
 }
 
+.main h2 {
+margin-bottom: 30px;
+}
+
 .main a {
+color: #000;
+text-decoration: none;
+font-size: 0.8em;
 padding:10px;
 background-color:rgba(200,200,200,0.8);
-border-radius:10px;
+border-radius:5px;
 box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .main p {
-font-size: 20px;
+font-size: 1.1em;
 margin:30px auto 30px auto;
 padding:10px;
 width: 75%;
@@ -128,8 +135,12 @@ background-color: rgba(240,240,240,0.7);
 margin-top:20px;
 border-radius:10px;
 box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-margin-left:15px;
-margin-right:15px;
+margin-left:45px;
+margin-right:45px;
+}
+
+.hero div details summary h3 {
+font-size: 1.5em;
 }
 
 .hero .character1 img {
@@ -187,8 +198,8 @@ background-color: rgba(240,240,240,0.7);
 margin-top:20px;
 border-radius:10px;
 box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-margin-left:15px;
-margin-right:15px;
+margin-left:45px;
+margin-right:45px;
 }
 
 .place .place1 img {
@@ -253,6 +264,11 @@ background-color:rgba(255,255,255,0.8);
 border-radius:10px;
 }
 
+footer ul li a {
+text-decoration: none;
+color: #000;
+}
+
 footer p {
 padding:10px;
 background-color:#000;
@@ -273,8 +289,8 @@ text-align:center;
 			<summary><span>Menú</span><img src="menu.webp" alt="menu"/></summary>
 				<ul>
 					<li><a href="#">Coneix KOW</a></li>
-					<li><a href="#">Protagonistes</a></li>
-					<li><a href="#">Llocs a visitar</a></li>
+					<li><a href="hero.html">Protagonistes</a></li>
+					<li><a href="place.html">Llocs a visitar</a></li>
 					<li><a href="#">KOW Lite</a></li>
 					<li><a href="#">Sobre noltros</a></li>
 					<li><a href="#">Contacte</a></li>
@@ -303,56 +319,34 @@ Així comença una nova era, on la natura parla a través de la sang i el destí
 	<section class="hero">
 		<h2> CONEIX ELS PROTAGONISTES DE KOW </h2>
 		<div class="character1">
-			<img src="elProtector.webp" alt="character1"/>
+			<img src="elProtector.webp" loading="lazy" alt="character1"/>
 			<details>
-				<summary><h3>El protector d'horitzons</h3><p>Veure més</p></summary>
-				<p>Kael d’Altheryn és un jove marcat pel fred etern. De mirada glaçada i paraules escasses, Kael prefereix el silenci de les muntanyes nevades al brogit dels castells i ciutats. La seva naturalesa solitària amaga, però, un esperit profundament protector, disposat a enfrontar qualsevol perill per defensar aquells que estima, encara que ell mateix ho negui.
-
-Porta dins seu el poder antic del gel, capaç de congelar rius amb un gest i d’aixecar murs de cristall entre la vida i la mort. Però el que el fa realment únic és la seva connexió amb els dracs de gel —criatures llegendàries que només responen a l’autoritat d’un veritable Hereu del Glaç. Quan Kael crida, els cels es cobreixen de neu i ales blanques travessen l’aire com espectres.
-
-Misteriós i inabastable, Kael carrega el pes d’un passat desconegut i d’un futur que no ha triat. Però si el fred no ha trencat el seu cor, potser encara hi queda una esperança capaç d’encendre la flama entre els hiverns del destí.</p>
+				<summary><h3>El protector d'horitzons</h3><span>Veure més</span></summary>
+				<p>Kael d’Altheryn és un jove marcat pel fred etern. De mirada glaçada i paraules escasses, Kael prefereix el silenci de les muntanyes nevades al brogit dels castells i ciutats...</p>
 			</details>
 		</div>
 			
 		<div class="character2">
-			<img src="sombraMarina.webp" alt="character2"/>
+			<img src="sombraMarina.webp" loading="lazy" alt="character2"/>
 			<details>
-				<summary><h3>L'ombra marina, amo d'armes</h3><p>Veure més</p></summary>
-				<p>Neris de Thalassor és fill de les marees i hereu dels corrents més profunds. Amb els ulls del color de l’escuma marina i els cabells com les ones a punt de trencar, Neris camina entre el món dels humans i el dels oceans com un pont viu entre dos regnes.
-
-El seu poder es manifesta amb una fluïdesa perillosa: pot modelar l’aigua com si fos metall líquid, convertint-la en llances, escuts o corrents tallants que obeeixen la seva voluntat. Quan entra en combat, el mar sembla despertar, i les seves onades responen com si fossin extensions del seu propi cos.
-
-Però el que més sorprèn d’ell és la seva afinitat amb els taurons, bèsties sovint temudes, que per a ell són aliats i guardians. Amb un sol pensament, Neris pot cridar-los des de les profunditats, i nedar entre ells com un germà entre iguals.
-
-De caràcter lliure, apassionat i imprevisible com el mateix oceà, Neris porta dins seu la força d’un maremot i la calma d’una mar plana. És tant salvació com tempesta, i ningú sap mai quina versió d’ell trobarà quan el mar parli amb la seva veu.</p>
+				<summary><h3>L'ombra marina, amo d'armes</h3><span>Veure més</span></summary>
+				<p>Neris de Thalassor és fill de les marees i hereu dels corrents més profunds. Amb els ulls del color de l’escuma marina i els cabells com les ones a punt de trencar... </p>
 			</details>
 		</div>
 			
 		<div class="character3">
-			<img src="airWhisper.webp" alt="character3"/>
+			<img src="airWhisper.webp" loading="lazy" alt="character3"/>
 			<details>
-				<summary><h3>Murmurador dels vuit vents</h3><p>Veure més</p></summary>
-				<p>Aerin del Vent Sagrat és tan impossible de retenir com una brisa lliure. Amb passos lleugers i ulls clars com el cel d’hivern, Aerin sembla més un murmuri que una presència, però darrere la seva aparença etèria s’amaga una força que ha fet tremolar cims i enderrocat murs.
-
-Hereu dels vents antics, pot sentir cada corrent com una melodia única, i manipular-les amb una precisió letal. Amb el seu arc, forjat en fusta de celèstia i corda d’aire condensat, canalitza els vents en fletxes invisibles que travessen l’espai com llamps. A cada tret, l’aire s’esquinça i res no pot escapar a la seva punteria.
-
-Aerin és observador, pacient i reservat, més còmode entre els núvols que entre les persones. Però aquells que guanyen la seva confiança descobreixen un aliat fidel i un esperit noble, sempre disposat a posar-se entre el perill i els innocents.
-
-Quan els vents bufen en direccions incertes, Aerin els escolta i els guia. I quan la tempesta arriba, ell no fuig: l’encavalca com un guerrer del cel.</p>
+				<summary><h3>Murmurador dels vuit vents</h3><span>Veure més</span></summary>
+				<p>Aerin del Vent Sagrat és tan impossible de retenir com una brisa lliure. Amb passos lleugers i ulls clars com el cel d’hivern...</p>
 			</details>
 		</div>
 			
 		<div class="character4">
-			<img src="estruendoNocturno.webp" alt="character4"/>
+			<img src="estruendoNocturno.webp" loading="lazy" alt="character4"/>
 			<details>
-				<summary><h3>Estrèpic imperial nocturn</h3><p>Veure més</p></summary>
-				<p>Raik de Tempestral és el crit del tro fet carn, un fill de la tempesta que camina entre llamps i núvols foscos amb l’arrogància d’algú que ha après a dominar el caos. D’ulls intensos com el blau dels llamps i un somriure que encén l’aire al seu voltant, Raik no coneix el silenci: allà on va, la tempesta el segueix.
-
-La seva arma, Fulminar, és una espasa viva que pot allargar-se com un llàtig d’energia pura, xiulant entre els vents amb cada moviment. Quan Raik la desferma, els cels es despullen de la seva calma, i els llamps cauen com respostes violentes a la seva crida. Cada cop és un esclat, un espetec de força salvatge que il·lumina la nit.
-
-Impulsiu, intens i a vegades temerari, Raik actua abans de pensar, però el seu cor és fidel i indomable. Té un caràcter magnètic que atrau i espanta a parts iguals, i una ràbia profunda contra les injustícies que encén literalment l’aire al seu voltant.
-
-Es diu que quan ell s’enfada, el cel plora i el món tremola. Però darrere la fúria hi ha un noi marcat per pèrdues i secrets, que busca el seu lloc entre el tro i el silenci.</p>
+				<summary><h3>Estrèpic imperial nocturn</h3><span>Veure més</span></summary>
+				<p>Raik de Tempestral és el crit del tro fet carn, un fill de la tempesta que camina entre llamps i núvols foscos...</p>
 			</details>
 		</div>
 
@@ -361,68 +355,34 @@ Es diu que quan ell s’enfada, el cel plora i el món tremola. Però darrere la
 	<section class="place">
 		<h2> DESCOBREIX ELS LLOCS DE KOW </h2>
 		<div class="place1">
-			<img src="aldeaPrincipal.webp" alt="place1"/>
+			<img src="aldeaPrincipal.webp" loading="lazy" alt="place1"/>
 			<details>
-				<summary><h3>Lindoria, Bressol dels Elements</h3><p>Veure més</p></summary>
-				<p>Lindoria, també anomenat el Bressol dels Elements, és un poble enclavat en un vall ample i misteriós on convergeixen tres forces antigues: el murmuri constant del Temple d’Aigua, la silueta majestuosa del Palau de Gel i la presència imponent del Temple de la Tempesta, d’inspiració oriental.
-
-Rodejat per boscos humits, terres gebrades i senders que tremolen sota els vents, Lindoria és el centre d’un equilibri fràgil però profund. Les seves cases, de pedra fosca i teulades de fusta cobertes de molsa, es fonen amb el paisatge com si haguessin crescut des de la terra mateixa. Els habitants, acostumats als canvis sobtats de clima i a la màgia latent que flueix pels camins, viuen amb un respecte reverent per les forces que els envolten.
-
-A l’est, el Temple d’Aigua s’amaga entre llacunes i ponts de pedra corbats, on Neris troba refugi i força. Al nord, el Palau de Gel, una fortalesa silenciosa excavada en un penya-segat glaçat, acull Kael i el seu exèrcit de silencis i cristall. I al sud-oest, enmig de cirerers solitaris i terres ressecades per llamps, s’alça el Temple del Tro, d’estil japonès, on Raik entrena sota el repic de tambors i la fúria dels núvols.
-
-Lindoria és neutral, però no ignorant. Saben que els Hereus viuen a prop, i que el destí del món pot començar —o acabar— en qualsevol de les rutes que neixen entre els seus carrers de pedra. És un lloc de pas, d’encontres i secrets, on tot pot canviar amb una sola tempesta, un cop de vent o una gota al mar.</p>
+				<summary><h3>Lindoria, Bressol dels Elements</h3><span>Veure més</span></summary>
+				<p>Lindoria, també anomenat el Bressol dels Elements, és un poble enclavat en un vall ample i misteriós on convergeixen tres forces antigues... </p>
 			</details>
 		</div>
 		
 		<div class="place2">
-			<img src="restauranteHelado.webp" alt="place2"/>
+			<img src="restauranteHelado.webp" loading="lazy" alt="place2"/>
 			<details>
-				<summary><h3>Kael, El palau de Silenci</h3><p>Veure més</p></summary>
-				<p>El Palau de Silenci, llar de Kael d’Altheryn, s’erigeix com una joia gèlida enmig d’una vall envoltada per muntanyes de neu perpètua. Tallat íntegrament en gel pur, brillant com el cristall i resistent com l’acer, el palau no només és una fortalesa, sinó una obra d’art viva, freda i majestuosa.
-
-A la planta baixa, s’hi troba La Sala Blava, un espai refinat que recorda els salons més exclusius dels antics regnes. Funciona com un gran restaurant d’aire cerimonial, on el gel ha estat polit amb tanta precisió que sembla marbre translúcid. Columnes esveltes s’alcen com estalactites convertides en arquitectura, i els sostres, alts i ornamentats, reflecteixen la llum de torxes encantades que mai fonen el gel.
-
-Les taules, les cadires, els coberts i fins i tot les copes estan fetes d’un gel especial que no es trenca ni es fon, i són utilitzades en cerimònies, banquets rituals i reunions diplomàtiques entre els guardians del Nord. A través de parets semitransparents es poden veure criatures de glaç passejant lentament pel bosc exterior, com si fossin part del decorat viu.
-
-A la planta superior, s’estén una plaça d’entrenament gegantina, igualment feta de gel, però amb una elegància imponent. El terra és llis i fort com pedra, marcat per subtils gravats en forma de runes antigues que es retroalimenten amb l’energia de Kael. La plaça està envoltada per baranes de gel cisellades, grades on poden observar-se duels i entrenaments, i grans miralls glaçats que reflecteixen cada moviment amb precisió letal.
-
-És aquí on Kael perfecciona el seu domini sobre el glaç i el combat, tot sota una cúpula oberta que deixa entrar la llum del dia o la lluna, i per on de vegades baixen flocs de neu que es fonen en l’aire, mai al sòl.
-
-Silenciós però imponent, el Palau de Silenci no és només un refugi: és un santuari del fred, de la disciplina i de la bellesa letal. Un lloc on l’elegància es transforma en poder, i on qualsevol pas en fals pot quedar gravat per sempre en gel etern.</p>
+				<summary><h3>Kael, El palau de Silenci</h3><span>Veure més</span></summary>
+				<p>El Palau de Silenci, llar de Kael d’Altheryn, s’erigeix com una joia gèlida enmig d’una vall envoltada per muntanyes de neu perpètua...</p>
 			</details>
 		</div>
 			
 		<div class="place3">
-			<img src="palacioAquatico.webp" alt="place3"/>
+			<img src="palacioAquatico.webp" loading="lazy" alt="place3"/>
 			<details>
-				<summary><h3>Thalassor, El palau de les Marees</h3><p>Veure més</p></summary>
-				<p>El Palau de les Marees, residència de Neris de Thalassor, s’alça enmig d’un gran llac d’aigües profundes i blavíssimes, inaccessible per terra si no és a través d’un pont fet d’aigua viva, una obra màgica que només es manifesta sota la voluntat del seu habitant. Quan el pont es desplega, flueix com una serp líquida sobre la superfície del llac, brillant com cristall sota la llum del sol o la lluna.
-
-El palau, d’inspiració àrab, és una meravella arquitectònica amb cúpules de ceràmica turquesa, arcs de mig punt esculpits amb formes de peixos i corall, i filigranes humides que degoten una aigua que mai no s’asseca. Les parets interiors, fetes de pedra polida i cobertes de mosaics que representen escenes marines i llegendes d’antics Hereus, respiren història i màgia.
-
-Als passadissos serpentejants i cambres interiors hi ha col·leccions d’armes aquàtiques: tridents d’escuma dura, llances de corall roent, espases forjades amb pressió marina i fins i tot xarxes encantades que s’entrellacen soles. Totes elles pengen elegantment de les parets com si fossin peces d’art, però estan llestes per ser empunyades en un instant.
-
-Els estanys interiors, les fonts que mai deixen de rajar i els jardins submergits que es poden veure des de sòls de vidre transparent fan del Palau un lloc tant sagrat com perillós. Les criatures marines més fidels a Neris —taurons blancs, rajades gegants i esperits d’aigua— habiten els voltants, patrullant l’espai com guardians silenciosos.
-
-Allà dins, el temps sembla fluir com una onada lenta. Però sota la bellesa hi batega una força incontenible, com una tempesta a punt de desfermar-se al fons de l’oceà.</p>
+				<summary><h3>Thalassor, El palau de les Marees</h3><span>Veure més</span></summary>
+				<p>El Palau de les Marees, residència de Neris de Thalassor, s’alça enmig d’un gran llac d’aigües profundes i blavíssimes, inaccessible per terra...</p>
 			</details>
 		</div>
 			
 		<div class="place4">
-			<img src="palacioTrueno.webp" alt="place4"/>
+			<img src="palacioTrueno.webp" loading="lazy" alt="place4"/>
 			<details>
-				<summary><h3>Raik, El temple del Tro Etern</h3><p>Veure més</p></summary>
-				<p>El Temple del Tro Etern, residència de Raik de Tempestral, s’alça majestuós sobre un turó voltat per núvols baixos i vents canviants. Construït com els antics temples japonesos, l’edifici és una meravella de fusta negra, teulades corbades cobertes de teules grises, i portes corredisses amb panells translúcids que tremolen suaument amb cada bufada d’aire carregat d’electricitat.
-
-Malgrat la seva connexió amb la fúria del cel, l’interior del temple és sorprenentment serè i equilibrat, amb terres de fusta càlida i espais oberts on el silenci només és interromput pel retum subtil dels llamps llunyans. L’atmosfera es carrega amb energia latent, com si l’aire estigués sempre a punt d’esclatar.
-
-El cor del temple, però, no es troba a l'interior, sinó en el gran jardí exterior, una extensió ampla i harmoniosa plena de violetes salvatges, delicades però resistents, que creixen sota un cel sovint cobert per tempestes. Aquest jardí no és només un lloc de contemplació, sinó un espai sagrat, perquè les violetes són considerades els símbols de la força interior de Raik: belles, humils i indestructibles.
-
-Protegint aquest jardí hi viu Kōrai, un llop fet de llamps purs. El seu cos està format per filaments d’energia vibrant, i els seus ulls brillen com dos focus de tempesta. Kōrai es mou entre les flors sense danyar-les, vigilant, respirant trons, i desapareixent entre llampecs cada cop que algú s’hi acosta amb males intencions.
-
-El temple també conté una sala d’entrenament oberta, amb el sòl de pedra negra i columnes gravades amb símbols que representen el vent, la pluja, els llamps i el tro. És aquí on Raik perfecciona els seus atacs, desfermant la seva espasa-llàtig com una prolongació del cel, sota la mirada ancestral dels dracs de tempesta tallats als murs.
-
-El Temple del Tro Etern és un lloc on la bellesa es barreja amb el perill, on cada pas és respectuós, i on la tempesta no es tem: s’honora.</p>
+				<summary><h3>Raik, El temple del Tro Etern</h3><span>Veure més</span></summary>
+				<p>El Temple del Tro Etern, residència de Raik de Tempestral, s’alça majestuós sobre un turó voltat per núvols baixos i vents canviants...</p>
 			</details>
 		</div>
 	
