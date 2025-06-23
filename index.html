@@ -13,7 +13,7 @@ box-sizing: border-box;
 }
 
 body {
-  transition: background 0.6s ease-in-out;
+  transition: background 300ms linear;
 }
 
 header, footer {
@@ -160,13 +160,6 @@ border-radius: 10px;
 box-shadow: 2px 2px 10px 2px #000;
 }
 
-.hero .character4 img {
-height:100%;
-width: 100%;
-border-radius: 10px;
-box-shadow: 2px 2px 10px 2px #000;
-}
-
 .hero .character1 details {
 padding: 10px;
 }
@@ -176,10 +169,6 @@ padding: 10px;
 }
 
 .hero .character3 details {
-padding: 10px;
-}
-
-.hero .character4 details {
 padding: 10px;
 }
 
@@ -219,13 +208,6 @@ border-radius: 10px;
 box-shadow: 2px 2px 10px 2px #000;
 }
 
-.place .place4 img {
-height: 100%;
-width: 100%;
-border-radius: 10px;
-box-shadow: 2px 2px 10px 2px #000;
-}
-
 .place .place1 details {
 padding: 10px;
 }
@@ -238,12 +220,8 @@ padding: 10px;
 padding: 10px;
 }
 
-.place .place4 details {
-padding: 10px;
-}
-
 footer {
-margin-top:20px;
+margin-top:40px;
 }
 
 footer ul {
@@ -252,12 +230,13 @@ list-style:none;
 display: flex;
 justify-content: space-around;
 align-items: center;
+padding: 5px;
 }
 
 footer ul li {
-padding: 10px;
+padding: 5px;
 background-color:rgba(255,255,255,0.8);
-border-radius:10px;
+border-radius:5px;
 }
 
 footer ul li a {
@@ -305,15 +284,11 @@ text-align:center;
 
 Aquests poders, forjats en el foc del volcà, dansants en els corrents del mar, arrelats en la saba dels boscos i xiuxiuejants en les brises del cel, no s’ensenyen: es desperten. I quan ho fan, ho fan amb una força devastadora.
 
-Els Hereus no són escollits; són cridats. Els seus dons estan lligats a l’essència mateixa del món: el foc, l’aigua, la terra, l’aire… i d’altres de més foscos i secrets, com el glaç etern, la tempesta caòtica i l’ombra de la vida. Molts creuen que aquests poders són benediccions. Altres, malediccions.
-
-Els regnes d’Aetherion tremolen davant la profecia del "Segon Despertar", que anuncia una guerra d’elements on només aquells que abracin la seva herència podran canviar el destí del món. Però els Hereus són joves, inexperts, i la seva batalla més gran serà contra ells mateixos. Podran dominar les forces que habiten dins seu abans que destrueixin tot allò que estimen?
-
-Així comença una nova era, on la natura parla a través de la sang i el destí es forja amb el poder dels elements.</p>
+Els Hereus no són escollits; són cridats. Els seus dons estan lligats a l’essència mateixa del món: el foc, l’aigua, la terra, l’aire… i d’altres de més foscos i secrets, com el glaç etern, la tempesta caòtica i l’ombra de la vida.</p>
 	</section>
 	
 	<section class="hero">
-		<h2> CONEIX ELS PROTAGONISTES DE KOW </h2>
+		<h2> CONEIX ELS PROTAGONISTES </h2>
 		<div class="character1">
 			<img src="elProtector.webp" alt="character1"/>
 			<details>
@@ -338,18 +313,10 @@ Així comença una nova era, on la natura parla a través de la sang i el destí
 			</details>
 		</div>
 			
-		<div class="character4">
-			<img src="estruendoNocturno.webp" alt="character4"/>
-			<details>
-				<summary><h3>Estrèpic imperial nocturn</h3><span>Veure més</span></summary>
-				<p>Raik de Tempestral és el crit del tro fet carn, un fill de la tempesta que camina entre llamps i núvols foscos...</p>
-			</details>
-		</div>
-
 	</section>
 	
 	<section class="place">
-		<h2> DESCOBREIX ELS LLOCS DE KOW </h2>
+		<h2> DESCOBREIX ELS LLOCS </h2>
 		<div class="place1">
 			<img src="aldeaPrincipal.webp" alt="place1"/>
 			<details>
@@ -373,15 +340,7 @@ Així comença una nova era, on la natura parla a través de la sang i el destí
 				<p>El Palau de les Marees, residència de Neris de Thalassor, s’alça enmig d’un gran llac d’aigües profundes i blavíssimes, inaccessible per terra...</p>
 			</details>
 		</div>
-			
-		<div class="place4">
-			<img src="palacioTrueno.webp" alt="place4"/>
-			<details>
-				<summary><h3>Raik, El temple del Tro Etern</h3><span>Veure més</span></summary>
-				<p>El Temple del Tro Etern, residència de Raik de Tempestral, s’alça majestuós sobre un turó voltat per núvols baixos i vents canviants...</p>
-			</details>
-		</div>
-	
+				
 	</section>
 	
 </main>
@@ -401,7 +360,7 @@ Així comença una nova era, on la natura parla a través de la sang i el destí
 
 <script>
 
-const characterContainers = document.querySelectorAll('.character1, .character2, .character3, .character4');
+const characterContainers = document.querySelectorAll('.character1, .character2, .character3');
 
 characterContainers.forEach(container => {
   const details = container.querySelector('details');
@@ -455,19 +414,8 @@ characterContainers.forEach(container => {
 	  document.querySelectorAll('h2').forEach(h2 => {
   	  	h2.style.color = 'black';
 	  });
-        } else if (container.classList.contains('character4')) {
-          document.body.style.background = "url('estruendoNocturnoFondo.webp') no-repeat center center / cover fixed";
-	  document.getElementById("desc").style.background = "rgba(240,240,240,0.8)";
-	  document.getElementById("desc").style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
-	  document.getElementById("desc").style.borderRadius = "5px";
-	  document.querySelectorAll('h1').forEach(h1 => {
-  	  	h1.style.color = 'white';
-	  });
-	  document.querySelectorAll('h2').forEach(h2 => {
-  	  	h2.style.color = 'white';
-	  });
         }
-      } else {
+       } else {
         // Si se cerró
         document.body.style.background = "none";
 	document.getElementById("desc").style.background = "none";
